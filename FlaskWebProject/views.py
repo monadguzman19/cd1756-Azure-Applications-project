@@ -136,5 +136,5 @@ def _build_auth_url(authority=None, scopes=None, state=None):
     return msal_app.get_authorization_request_url (
         scopes or Config.SCOPE,
         state=state or session.get("state"),
-        redirect_uri=url_for("authorized",_external=True)
+        redirect_uri=url_for("authorized",_external=True, scheme="https")
     )
