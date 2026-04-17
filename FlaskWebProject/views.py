@@ -33,6 +33,8 @@ def home():
             app.logger.critical('Critical error occured.')
     return render_template(
         'index.html',
+        title='Home Page',
+        posts=posts,
         log=log
     )
 
